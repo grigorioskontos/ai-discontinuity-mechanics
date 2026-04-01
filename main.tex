@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+\geometry{a4paper, margin=1in}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+
+\title{\textbf{Predicting Critical Transitions in Complex Systems: \\ A Hybrid Physics-Informed Machine Learning Approach}}
+\author{\textbf{Grigorios A. Kontos} \\ 
+Mentor: Dr. Andrés A. León Baldelli }
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This research proposal aims to bridge the gap between variational fracture mechanics and data-driven machine learning (ML) models to predict critical transitions in complex systems. By moving beyond traditional eigenvalue analysis and focusing on raw geometric descriptors and time-series stability markers, we propose a framework capable of identifying "tipping points" in both physical structures and multi-disciplinary systems such as economic markets and biological cascades.
+\end{abstract}
+
+\section{Introduction}
+The prediction of sudden structural failure remains one of the most challenging problems in continuum mechanics. Traditionally, stability loss is analyzed through the lens of energy minimization and spectral analysis of the Hessian operator. However, these methods often require precise knowledge of the system's energy functional, which is not always available in real-world applications or cross-disciplinary contexts.
+
+This project proposes a \textbf{Strategic Twist}: instead of utilizing manually computed physical stability markers (like eigenvalues) as inputs for ML models, we aim to train models on raw geometric data and stochastic defect maps. The goal is to develop a "universal failure detector" that can be generalized to non-mechanical systems exhibiting similar catastrophic transitions
+
+
+
+% COMMENT: Andrés, I tried to highlight the "Strategic Twist" we discussed 
+% regarding the shift from pre-computed eigenvalues to raw geometry. 
+% Let me know if the tone is right for the CNRS/Sorbonne applications.
+
+
+\section{State of the Art}
+\subsection{Variational Fracture Mechanics}
+The work of Francfort and Marigo (1998) established a variational framework for fracture, where the crack path is determined by the minimization of a total energy functional $E = \mathcal{E}_{elastic} + \mathcal{G}_{surface}$. In this project, we utilize 1D and 2D rod/plate models with random defects to simulate failure load (strain) and failure locations.
+
+\subsection{Machine Learning in Mechanics}
+Current trends in Physics-Informed Neural Networks (PINNs) focus on embedding PDEs into loss functions. However, our approach diverges by focusing on \textbf{Interpretability} and \textbf{Feature Importance}. We utilize Random Forest Regressors and Deep Learning to identify hidden patterns in defect geometry that lead to stability loss.
+
+\section{Proposed Methodology}
+\subsection{Data Generation and Synthetic Environments}
+We will generate a vast dataset of 1D rods with stochastic defect distributions. Each sample will represent a unique "material signature." We will move from simple 1D models to 2D topological structures with complex hole distributions to study how geometry dictates crack nucleation.
+
+\subsection{The Shift from Eigenvalues to Geometric Descriptors}
+A core novelty of this thesis is the rejection of "pre-processed" physical markers. We propose the use of:
+\begin{itemize}
+    \item \textbf{Raw Defect Maps:} Direct spatial information of material quality.
+    \item \textbf{Geometric Descriptors:} Statistical moments, Betti numbers (topology), and critical defect proximity.
+    \item \textbf{Dynamic Features:} Time-series data representing the system's evolution under increasing load.
+\end{itemize}
+
+\subsection{Model Architecture}
+We will compare the performance of:
+\begin{enumerate}
+    \item \textbf{Random Forest Regressors:} To extract "Feature Importance" and understand the hierarchy of defect influence.
+    \item \textbf{Recurrent Neural Networks (RNN/LSTM):} To analyze the temporal "shaking" or stability fluctuations prior to the failure jump.
+\end{enumerate}
+
+
+
+% COMMENT: This is where your fracture model comes in! I've left space here 
+% to describe how we will integrate your physics-based routines 
+% with the ML pipeline I've started building on GitHub.
+
+\section{Cross-Disciplinary Generalization}
+The mathematical underlying of "Stability Loss" is universal. We aim to apply the developed failure-detection framework to:
+
+\begin{itemize}
+    \item \textbf{Socio-Economic Systems:} Analyzing "Flash Crashes" in Cryptocurrency markets. Unlike traditional stocks, crypto markets provide high-frequency data where "pump-and-dump" schemes act as artificial defects, leading to a sudden loss of marginal stability.
+    \item \textbf{Epidemiology and Biology:} Modeling viral outbreaks as a phase transition. The transition from a localized cluster to a global pandemic ($R_0 > 1$) can be viewed as a structural failure of the containment system.
+    \item \textbf{Neuroendocrine Cascades:} Studying abrupt physiological discharges and subsequent refractory periods as relaxation oscillators.
+\end{itemize}
+
+
+
+
+% COMMENT: I was really inspired by your suggestion on Crypto markets. 
+% I also added the Biology/COVID examples we talked about. 
+% I think the "Refractory Period" analogy fits perfectly with our 
+% relaxation oscillator model. What do you think?
+
+\section{Research Timeline (3 Years)}
+\begin{itemize}
+    \item \textbf{Year 1:} Development of 2D synthetic datasets and refinement of geometric descriptors. Comparison between Random Forests and MLP models.
+    \item \textbf{Year 2:} Integration of the "Crypto-Market" dataset. Testing the model's ability to predict "tipping points" in high-frequency financial time-series.
+    \item \textbf{Year 3:} Final synthesis of the cross-disciplinary framework. Writing of the dissertation and publication of results in high-impact journals (e.g., Journal of the Mechanics and Physics of Solids, Nature Communications).
+\end{itemize}
+
+\section{Funding and Feasibility}
+The project aligns with current EU funding priorities for "AI for Science" and "Resilient Systems." Potential funding sources include [Mention the specific ones Andrés sent you, e.g., CNRS Grants, Sorbonne PhD Fellowships].
+
+\section{Conclusion}
+By combining the rigorous mathematical foundation of variational fracture mechanics with the predictive power of data-driven models, this research seeks to uncover the universal patterns that precede catastrophic failure. This "physics-beyond-physics" approach will not only advance our understanding of material science but also provide tools to manage risks in financial and biological systems.
+
+
+
+
+\end{document}
